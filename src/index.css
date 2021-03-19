@@ -1,13 +1,107 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: tan;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.calculator {
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+  background-color: chocolate;
+  height: 360px;
+  width: 240px;
+}
+
+.display {
+  text-align: right;
+  width: 100%;
+  height: 60px;
+  padding: 20px 10px;
+  font-size: 30px;
+  position: relative;
+}
+
+.display small {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 12px;
+}
+
+.nums-container {
+  width: 75%;
+}
+
+.ops-container {
+  width: 25%;
+}
+
+button {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: none;
+  margin: 5px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button.big-h {
+  width: 110px;
+  border-radius: 50px;
+}
+
+button.big-v {
+  height: 110px;
+  border-radius: 50px;
+}
+
+button.op-color {
+  background-color: white;
+}
+
+button.clear-color {
+  background-color: grey;
+}
+
+button.num-color {
+  background-color: black;
+  color: white;
+}
+
+button.ac {
+  margin-right: 25%;
 }
